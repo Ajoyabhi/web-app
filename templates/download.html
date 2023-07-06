@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>NPA Data-Gen</title>
+    <link
+      rel="stylesheet"
+      href="static/css/node_modules/materialize-css/dist/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="static/css/style.css?1.4.2" />
+    <link rel="stylesheet" href="static/css/bootstrap-4-utilities.min.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- Additional Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&family=Merriweather&family=Montserrat&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <script src="static/try_n.js"></script>
+  </head>
+
+  <div class="container">
+    <div class="col s12 m3">
+      <div class="services-container center-align">
+        <h3 style="font-family: 'Merriweather', serif">
+          NPA file is generated, Click <div style="margin-top: 5px;"><b>download file</b> to download</div> 
+        </h3>
+
+        <a
+          href="{{ url_for('download', filename = filename) }}"
+          id="test"
+          hidden
+          >download Excel</a
+        ><br />
+        <button
+          class="btn bg-primary"
+          type="button"
+          onclick="document.getElementById('test').click()"
+          style="background: #004c8f"
+          id="download1"
+        >
+          <strong>Download file</strong>
+        </button>
+      </div>
+    </div>
+  </div>
+</html>
